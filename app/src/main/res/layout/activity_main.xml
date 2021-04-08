@@ -5,15 +5,440 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#040817"
+    android:forceDarkAllowed="false">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:scrollbarThumbVertical="@color/orange">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:lottie_fileName="android.json"
+                app:lottie_loop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="-28dp"
+                android:rotation="90"
+                app:lottie_autoPlay="true" />
+
+            </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/firstPart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/helloAndName"
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/helloIAm"
+            android:layout_width="108dp"
+            android:layout_height="52dp"
+            android:src="@drawable/helloiam"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp" />
+
+            <ImageView
+                android:id="@+id/name"
+                android:layout_width="198dp"
+                android:layout_height="62dp"
+                android:src="@drawable/name"
+                android:layout_below="@+id/helloIAm"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="An Android Developer And Freelancer"
+                android:maxLines="1"
+                android:textSize="10sp"
+                android:layout_below="@id/name"
+                android:layout_centerInParent="true" />
+
+            <RelativeLayout
+                android:id="@+id/socialMediaBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/name">
+
+            <ImageView
+                android:layout_width="168dp"
+                android:layout_height="32dp"
+                android:src="@drawable/socialmediabox" />
+
+            <ImageView
+                android:id="@+id/githubLogo"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/github"/>
+
+                <ImageView
+                    android:id="@+id/linkedInLogo"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/githubLogo"
+                    android:src="@drawable/linkedin"
+                    android:layout_marginLeft="16dp"/>
+
+                <ImageView
+                    android:id="@+id/instaLogo"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/linkedInLogo"
+                    android:src="@drawable/instagram_logo"
+                    android:layout_marginLeft="18dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/profilePic"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="280dp"
+                android:layout_weight="1">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="25dp"
+                    android:layout_alignParentLeft="true">
+
+                    <ImageView
+                        android:id="@+id/imgProfilePic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/profilepic" />
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/secondPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstPart">
+
+                    <RelativeLayout
+                        android:id="@+id/aboutMeGIF"
+                        android:layout_width="120dp"
+                        android:layout_height="112dp"
+                        android:layout_alignBaseline="@+id/aboutMeText">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="112dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginLeft="10dp"
+                    app:cardBackgroundColor="#FF6B00">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:lottie_fileName="about_me.json"
+                    app:lottie_loop="false"
+                    android:layout_centerInParent="true"
+                    app:lottie_autoPlay="true" />
+
+                </androidx.cardview.widget.CardView>
+
+                    </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/aboutMeText"
+                    android:layout_marginTop="35dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/aboutMeGIF"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/aboutMeTextTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About Me"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/aboutMeDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_me_description"
+                        android:layout_below="@+id/aboutMeTextTitle"
+                        android:layout_margin="15sp"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+
+                    <RelativeLayout
+                        android:id="@+id/languagesTab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_below="@id/aboutMeDescription">
+
+                    <ImageView
+                        android:id="@+id/C"
+                        android:layout_width="38dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/c"
+                        android:layout_marginLeft="15dp"/>
+
+                    <ImageView
+                        android:id="@+id/kotlin"
+                        android:layout_width="38dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/kotlin"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/C"/>
+
+                    <ImageView
+                        android:id="@+id/java"
+                        android:layout_width="38dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/java"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/kotlin"/>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/contactMe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/languagesTab"
+                        android:src="@drawable/contact_me"
+                        android:layout_margin="15dp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/thirdPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondPart">
+
+                <TextView
+                    android:id="@+id/whatIDotxtTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What i do"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="@color/white" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="65dp"
+                    android:layout_height="45dp"
+                    android:layout_toRightOf="@+id/whatIDotxtTitle"
+                    app:lottie_fileName="what_I_Do.json"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:layout_marginTop="15dp" />
+
+                <ImageView
+                    android:id="@+id/androidDeveloper"
+                    android:layout_width="266dp"
+                    android:layout_height="78dp"
+                    android:layout_below="@id/whatIDotxtTitle"
+                    android:src="@drawable/android_developer"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="25dp" />
+
+                <RelativeLayout
+                    android:id="@+id/androidDeveloperGif"
+                    android:layout_width="62dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_centerInParent="true"
+                    android:layout_below="@id/whatIDotxtTitle">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:lottie_fileName="android_developer.json"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_speed="3.5"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fourthpart"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_below="@+id/thirdPart">
+
+                <TextView
+                    android:id="@+id/myprojectstxtTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Projects"
+                    android:layout_margin="20dp"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="65dp"
+                    android:layout_height="45dp"
+                    android:layout_toRightOf="@+id/myprojectstxtTitle"
+                    app:lottie_fileName="my_projects.json"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="-10dp"/>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginHorizontal="50dp"
+                    app:tabBackground="@drawable/tab_background"
+                    android:layout_below="@+id/myprojectstxtTitle"/>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:overScrollMode="never"
+                    android:clipToPadding="true"
+                    android:layout_below="@+id/tabLayout"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fifthPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fourthpart">
+
+                <TextView
+                    android:id="@+id/txtCertficationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Certifications"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:layout_margin="25dp"
+                    android:textStyle="bold" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="65dp"
+                    android:layout_height="45dp"
+                    android:layout_toRightOf="@+id/txtCertficationTitle"
+                    app:lottie_fileName="certification.json"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="-10dp" />
+
+                <ImageView
+                    android:id="@+id/imgCertificate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_margin="25dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/my_certificate"
+                    android:layout_below="@+id/txtCertficationTitle" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@+id/fifthPart">
+
+                <TextView
+                    android:id="@+id/txtContactMeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Me"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:layout_margin="25dp"
+                    android:textStyle="bold" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/txtContactMeTitle"
+                    app:lottie_fileName="contact_me.json"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginLeft="-60dp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtContactMeTitle"
+                    android:layout_centerInParent="true">
+                
+                <ImageView
+                    android:id="@+id/gmailContact"
+                    android:layout_width="118dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/google_contact"
+                    android:layout_marginLeft="15dp" />
+
+                <ImageView
+                    android:id="@+id/discordContact"
+                    android:layout_width="118dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/discord_contact"
+                    android:layout_toRightOf="@+id/gmailContact"
+                    android:layout_marginLeft="10dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
