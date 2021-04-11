@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var githubLogo: ImageView
     lateinit var linkedInLogo: ImageView
     lateinit var instagramLogo: ImageView
+    //android and github both noob
     var flag = false
     var flag1 = false
     var flag2 = false
